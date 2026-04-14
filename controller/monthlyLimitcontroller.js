@@ -38,8 +38,7 @@ export const setMonthlyLimit = async (req, res) => {
       io.to(user._id.toString()).emit("limitUpdated", {
         message: "Monthly limit updated",
         monthlyLimit
-      });
-
+      }); 
     } catch (err) {
       console.log("⚠ Socket not ready:", err.message);
     }

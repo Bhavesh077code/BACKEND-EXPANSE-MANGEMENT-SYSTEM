@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Correct origin (no trailing slash)
 app.use(cors({
-    origin: ["http://192.168.1.67:5173", "http://192.168.1.67:5174"],
+    origin: "https://frontend-expanse-mangement-system.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));

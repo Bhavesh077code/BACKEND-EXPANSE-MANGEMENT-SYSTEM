@@ -7,7 +7,7 @@ export const initSocketServer = (server) => {
 
     io = new Server(server, {
         cors: {
-            origin: ["http://192.168.1.67:5173","http://192.168.1.67:5174"],
+            origin: "https://frontend-expanse-mangement-system.vercel.app/",
             methods: ["GET", "POST", "PUT", "DELETE"],
             credentials: true
         }
