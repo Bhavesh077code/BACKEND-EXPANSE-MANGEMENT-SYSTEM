@@ -7,8 +7,8 @@ import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 
-router.post("/send-otp", authMiddleware, rateLimit, sendOtp)
-router.post("/verify-otp", authMiddleware, rateLimit, verifyOtp);
+router.post("/send-otp", rateLimit, sendOtp)
+router.post("/verify-otp", rateLimit, verifyOtp);
 
 
 export default router;
