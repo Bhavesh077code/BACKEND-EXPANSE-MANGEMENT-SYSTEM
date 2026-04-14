@@ -9,6 +9,7 @@ import { getNotifications } from "../controller/setNotificationController.js";
 import { setMonthlyLimit } from "../controller/monthlyLimitcontroller.js";
 import { deleteExpense } from "../controller/deleteExpenseController.js";
 import { deleteNotification } from "../controller/deleteNotificationController.js";
+import { apiLimiter } from "../middleware/rateLimitMiddleware.js";
 
 
 const router= express.Router();
@@ -21,7 +22,7 @@ router.get("/edit/:id", authMiddleware, getSingleExpense);
 
 router.get("/dashboard", authMiddleware, getDashboard);
 router.get("/notification", authMiddleware, getNotifications);
-router.put("/set-limit", authMiddleware, setMonthlyLimit);
+router.put("/set-limit", authMiddleware, apiLimiter, setMonthlyLimit);
 router.delete("/delete/:id", authMiddleware, deleteExpense);
 router.delete("/delete/notification/:id", authMiddleware, deleteNotification);
 
