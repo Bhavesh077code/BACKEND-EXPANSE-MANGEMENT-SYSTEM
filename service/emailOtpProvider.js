@@ -107,6 +107,9 @@ import "dotenv/config";
 // Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+console.log("Resend initialized with API key:", process.env.RESEND_API_KEY ? "Yes" : "No");
+ 
+
 // NO CHANGE needed in your controller logic
 export const sendOtpToEmail = async (email, otp) => {
 
