@@ -1,5 +1,5 @@
 
-
+/*
 import nodemailer from "nodemailer";
 import "dotenv/config"
 
@@ -24,6 +24,9 @@ transporter.verify((error, success) => {
     console.log("Ready to send otp in the email")
   }
 });
+
+//EMAIL_PASS=dmuh pnmb qmah txrx
+//EMAIL_USER=ydvbhavesh5@gmail.com
 
 
 export const sendOtpToEmail = async (email, otp) => {
@@ -93,10 +96,11 @@ export const sendOtpToEmail = async (email, otp) => {
   })
 }
 
+*/
 
 
 
-/*
+
 import { Resend } from "resend";
 import "dotenv/config";
 
@@ -179,4 +183,3 @@ export const sendOtpToEmail = async (email, otp) => {
   }
 };
 
-*/
