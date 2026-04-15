@@ -1,5 +1,5 @@
 
-/*
+
 import nodemailer from "nodemailer";
 import "dotenv/config"
 
@@ -14,11 +14,6 @@ export const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
-//EMAIL_PASS=dmuh pnmb qmah txrx
-//EMAIL_USER=ydvbhavesh5@gmail.com
-
-
-
   }
 })
 
@@ -98,9 +93,10 @@ export const sendOtpToEmail = async (email, otp) => {
   })
 }
 
-*/
 
 
+
+/*
 import { Resend } from "resend";
 import "dotenv/config";
 
@@ -109,6 +105,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 console.log("Resend initialized with API key:", process.env.RESEND_API_KEY ? "Yes" : "No");
  
+//RESEND_API_KEY=re_7fPjmhVZ_BLDfLnL95QQjY7stJBCj85tM
+
 
 // NO CHANGE needed in your controller logic
 export const sendOtpToEmail = async (email, otp) => {
@@ -180,3 +178,5 @@ export const sendOtpToEmail = async (email, otp) => {
     throw new Error("Failed to send OTP email");
   }
 };
+
+*/
