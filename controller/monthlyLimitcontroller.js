@@ -13,6 +13,10 @@ export const setMonthlyLimit = async (req, res) => {
       return res.status(400).json({ message: "Valid monthly limit required" });
     }
 
+    if (monthlyLimit  < 500) {
+      return res.status(400).json({ message: "Monthly limit must be at least ₹500" });
+    }
+
     // Update user
     const user = await User.findByIdAndUpdate(
       req.user._id,
