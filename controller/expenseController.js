@@ -15,6 +15,7 @@ export const addExpense = async (req, res) => {
 
         const expenseAmount = Number(amount);
 
+        
         if (isNaN(expenseAmount) || expenseAmount <= 0) {
             return res.status(400).json({ message: "Amount must be a positive number" });
         }
