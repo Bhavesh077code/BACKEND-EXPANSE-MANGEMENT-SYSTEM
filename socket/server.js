@@ -8,6 +8,7 @@ export const initSocketServer = (server) => {
     io = new Server(server, {
         cors: {
             origin: [/\.vercel\.app$/],
+           // origin: "http://localhost:5173",
             methods: ["GET", "POST", "PUT", "DELETE"],
             credentials: true
         }

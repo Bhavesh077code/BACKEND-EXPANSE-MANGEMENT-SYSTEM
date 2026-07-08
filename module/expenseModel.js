@@ -11,12 +11,12 @@ const expenseSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ["Food", "Travel", "Bills", "Shopping", "Other"],
+    enum: ["Food", "RoomRent", "Vegitables", "CollageFees","Travel", "Bills", "Shopping", "Other"],
     required: true
   },
   paymentMethod: {
     type: String,
-    enum: ["Cash", "Card", "Esewa","Khalti", "MobileBanking"],
+    enum: ["Cash", "Card", "BankTransfer", "Paytm", "PhonePe", "UPI", "Esewa","Khalti", "MobileBanking"],
     default: "Cash"
   },
   description: {
